@@ -3,7 +3,7 @@
 ### **Giới Thiệu**
 Chào mừng bạn đến với dự án **Xây dựng Data Lake trên nền tảng Hadoop**! Đây là một giải pháp mạnh mẽ giúp bạn lưu trữ, xử lý và phân tích dữ liệu lớn với hiệu quả cao. Dự án này được thiết kế để đơn giản hóa quá trình cài đặt và triển khai, giúp bạn bắt đầu nhanh chóng với công nghệ Big Data.
 
-![Data Lake Architecture](docs/images/data_lake_architecture.png)
+![Data Lake Architecture](https://www.interviewbit.com/blog/wp-content/uploads/2022/06/Data-Lake-Architecture-1-1024x694.png)
 
 ---
 
@@ -48,18 +48,57 @@ XAY_DUNG_DATALAKE/
    git clone https://github.com/username/XAY_DUNG_DATALAKE.git
    cd XAY_DUNG_DATALAKE
    ```
-2. **Chạy script cài đặt:**
-   ```bash
-   bash install.sh
-   ```
-   ![Installation Process](docs/images/installation_process.png)
 
-3. **Cài đặt thư viện Python:**
+2. **Cài đặt thư viện Python:**
    Nếu cần cài đặt riêng, bạn chỉ cần chạy lệnh sau:
    ```bash
    pip install -r requirements.txt
    ```
 
+# Xây Dựng Data Lake Trên Nền Tảng Hadoop
+
+### **Giới Thiệu**
+Chào mừng bạn đến với dự án **Xây dựng Data Lake trên nền tảng Hadoop**! Đây là một giải pháp mạnh mẽ giúp bạn lưu trữ, xử lý và phân tích dữ liệu lớn với hiệu quả3. **Cài đặt Hadoop:**
+   - Tải về từ trang chính thức:
+     ```bash
+     wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
+     ```
+   - Giải nén và cấu hình:
+     ```bash
+     tar -xvf hadoop-3.3.4.tar.gz
+     sudo mv hadoop-3.3.4 /usr/local/hadoop
+     ```
+   - Thêm biến môi trường:
+     ```bash
+     export HADOOP_HOME=/usr/local/hadoop
+     export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+     ```
+   - Khởi động dịch vụ:
+     ```bash
+     hdfs namenode -format
+     start-dfs.sh
+     start-yarn.sh
+     ```
+
+4. **Cài đặt Spark:**
+   - Tải Spark:
+     ```bash
+     wget https://downloads.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz
+     ```
+   - Giải nén và cấu hình:
+     ```bash
+     tar -xvf spark-3.4.1-bin-hadoop3.tgz
+     sudo mv spark-3.4.1-bin-hadoop3 /usr/local/spark
+     ```
+   - Thêm biến môi trường:
+     ```bash
+     export SPARK_HOME=/usr/local/spark
+     export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+     ```
+   - Kiểm tra Spark:
+     ```bash
+     spark-shell
+     ```
 ---
 
 ## **Hướng Dẫn Sử Dụng**
@@ -69,36 +108,16 @@ XAY_DUNG_DATALAKE/
    start-dfs.sh
    start-yarn.sh
    ```
-   ![HDFS UI](docs/images/hdfs_ui.png)
+   ![HDFS UI](https://tse4.mm.bing.net/th?id=OIP.PfHpyMgnYoEQDUivc9iqYQHaDU&pid=Api&P=0&h=180)
 
-2. **Khởi động Kafka:**
-   ```bash
-   bin/zookeeper-server-start.sh config/zookeeper.properties
-   bin/kafka-server-start.sh config/server.properties
-   ```
-   ![Kafka Dashboard](docs/images/kafka_dashboard.png)
 
-3. **Khởi động Spark:**
+2. **Khởi động Spark:**
    ```bash
    pyspark
    ```
-   ![Spark Shell](docs/images/spark_shell.png)
+ 
 
-### **Chạy Quy Trình ETL**
-1. Thu thập dữ liệu:
-   ```bash
-   python src/ingestion/data_ingestion.py
-   ```
-2. Xử lý dữ liệu:
-   ```bash
-   python src/processing/data_processing.py
-   ```
-3. Phân tích dữ liệu:
-   ```bash
-   python src/analytics/data_analysis.py
-   ```
 
----
 
 ## **Đóng Góp**
 Nếu bạn muốn đóng góp vào dự án, hãy:
@@ -111,7 +130,7 @@ Nếu bạn muốn đóng góp vào dự án, hãy:
 ---
 
 ## **Liên Hệ**
-Mọi thắc mắc hoặc góp ý, vui lòng liên hệ qua email: **admin@dataproject.com**.
+Mọi thắc mắc hoặc góp ý, vui lòng liên hệ qua email: **vovantai2k4@gmail.com**.
 
 ---
 
